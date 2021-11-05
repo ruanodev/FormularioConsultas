@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./script.js" defer></script>
+
+    <title>Consultas Diárias</title>
+  </head>
+    <body class="container-sm">
+        <div class="container-lg">
+            <h1>Cadastro de Atendimento</h1>
+        </div>
+        <form name="form" class="row g-3" action="https://sheetdb.io/api/v1/hmtnjpfm1v44s" method="POST" name="FormCadastroConsultas">
+         <p></p>
+        <div class="col-md-6">
+          <!-- required="required" exigi que o campo esteja preenchido -->
+          <label class="form-label">Data de Atendimento</label>
+          <input type="date" class="form-control" id="data_atendimento" name="data[data_atendimento]" required="required">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Nome do Paciente</label>
+          <input type="text" maxlength="50" class="form-control" id="nome_paciente" name="data[nome_paciente]" required="required">
+        </div>
+        <p></p>
+        <div class="col-md-6">
+          <label class="form-label">Convênio Médico</label>
+          <select class="form-select" id="convenio" name="data[convenio]" required="required">
+            <option selected disabled value="">Selecione...</option>
+            <option>Amil</option>
+            <option>Notredame</option>
+            <option>Intermédica</option>
+            <option>Amil 2</option>
+          </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Procedimento</label>
+            <select class="form-select" id="procedimento" name="data[procedimento]" required>
+              <option selected disabled value="">Selecione...</option>
+              <option>Cardiologia</option>
+              <option>Cirurgia</option>
+              <option>Consulta Integral</option>
+              <option>Pediatria</option>
+            </select>
+          </div>
+          <p></p>
+          <div class="col-md-6">
+          <label class="form-label">Médico Atendimento</label>
+          <select class="form-select" id="medico" name="data[medico]" required="required">
+            <option selected disabled value="">Selecione...</option>
+            <option>Dra. Maria</option>
+            <option>Dr. João</option>
+            <option>Dra. Juliana</option>
+            <option>Dr. Joaquim</option>
+          </select>
+        </div>
+        <p></p>
+        <div class="col-12">
+          <label class="form-label">Observações</label>
+          <input maxlength="130" type="text" class="form-control2" id="observacoes" name="data[observacoes]">
+        </div>
+      </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" onclick="valida()">Cadastrar</button>
+        </div>
+        <div class="col-12">
+          <button type="reset" class="btn btn-secondary">Limpar</button>
+        </div>
+      </form>    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
