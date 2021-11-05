@@ -1,7 +1,6 @@
 
 /*Função validar formulário*/
 
-
 function valida () {
 
       var data_atendimento = document.getElementById("data_atendimento");
@@ -41,6 +40,19 @@ function valida () {
       
 }
 
-/*function aviso (){
-  alert("Dados Salvos!");
-}*/
+/* Script para exibir mensagem ou redirecionar usuário ao inves de apresentar mensagem Json {"created" :1} */
+    
+    var form = document.getElementById('FormCadastroConsultas');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("FormCadastroConsultas")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          alert('Obrigado!!')
+        });
+      });
+    
