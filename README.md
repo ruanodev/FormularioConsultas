@@ -1,6 +1,6 @@
 ﻿# Formularios de Consultas
 
-Objetivo: cadastrar consultas efetuadas no dia em consultório médico.
+Objetivo: cadastrar consultas efetuadas em consultório médico.
 
 Recursos utilizados: 
 
